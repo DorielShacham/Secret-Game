@@ -1,0 +1,129 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+
+<body style="
+position:relative;
+background-color: black;
+border-bottom: 5px solid blueviolet;
+border-left: 5px solid blueviolet;
+">
+    <div class="container" style="
+    position: relative;
+    width: 100vw;
+    height: 576px;
+    display: flex; 
+    justify-content: flex-end;">
+        <div class="row">
+            <div  class="miniTitle" style="
+            background-Color: black; 
+            color:blueviolet; 
+            height: 576px; 
+            max-height: 576px;; 
+            border-top: 5px solid blueviolet;
+            border-left: 5px solid blueviolet;
+            border-right: 5px solid blueviolet;
+            border-bottom: 5px solid blueviolet">
+                <h1><b>Secret Game</b></h1>
+                <h3><b>CONTROLS</b></h3>
+                <p>Left Player - AWSD to move, Space bar to attack.</p>
+                <p>Right Player - Arrows left,up,right to move, Arrow Down to attack.</p>
+                <p>Refresh to start over!!!</p>
+            </div>
+        </div>
+        <!--red container div-->
+        <div style="position: relative; display: inline-block">
+            <!--smaller red container div-->
+            <div style="
+                position: absolute;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                padding: 20px;
+            ">
+                <!--player health bar-->
+                <div style="position: relative;
+             width: 100%; 
+             display: flex; 
+             justify-content: 
+             flex-end;
+             border-top: 5px solid white;
+             border-left: 5px solid white;
+             border-bottom: 5px solid white;">
+                    <div style="background-color: red; height:30px; width: 100%;"></div>
+                    <div id="playerHealth" style="
+                        position: absolute;
+                        background: blueviolet;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                    "></div>
+                </div>
+
+                <!--timer-->
+                <div id="timer" style="
+                    background-color: black;
+                    border: 5px solid white;
+                    width: 100px;
+                    height:50px;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+
+                ">
+                    10
+                </div>
+
+                <!--enemy health bar-->
+                <div style="position: relative;
+                width: 100%; 
+                display: flex; 
+                justify-content: 
+                flex-end;
+                border-top: 5px solid white;
+                border-right: 5px solid white;
+                border-bottom: 5px solid white;">
+                    <div style="background-color: red; height:30px; width: 100%;"></div>
+                    <div id="enemyHealth" style="
+                        position: absolute;
+                        background: blueviolet;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    "></div>
+                </div>
+            </div>
+            <div id="displayText" style="position: absolute;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: none;
+            ">
+                Tie
+            </div>
+            <canvas></canvas>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+            integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/classes.js"></script>
+        <script src="index.js"></script>
+</body>
